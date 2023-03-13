@@ -11,8 +11,11 @@ run `set-executionpolicy remotesigned`
 
 
 ### virtual env ubuntu WSL
+
 install virtual env in laptop : `sudo apt install python3-venv`
+
 install vEnv in the project : `sudo python3 -m venv myenv`
+
 activate vEnv : `source myenv/bin/activate`
 
 
@@ -31,20 +34,26 @@ third try :
 
 ### install packages
 `pip install wheel`
+
 `pip install -r requirements.txt`
+
 `pip install pyopenssl==22.1.0`
 
 
-### install wkhtmltopdf
+### install wkhtmltopdf in ubuntu
 
 wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
+
 tar vxf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz 
+
 cp wkhtmltox/bin/wk* /usr/local/bin/
 
 ### create conf
 
 create folder named : conf
+
 create file : odoo.conf
+
 inside that put details:
 
     admin_passwd = admin
