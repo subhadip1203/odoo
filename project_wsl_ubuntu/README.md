@@ -8,16 +8,7 @@ run `get-executionpolicy` :this will show restricted
 
 run `set-executionpolicy remotesigned`
 
-### install Microsoft Visual C++ 14.0
-https://visualstudio.microsoft.com/visual-cpp-build-tools/
-https://go.microsoft.com/fwlink/?LinkId=691126
 
-
-### virtual environment windows:
-
-if virtual environment is not installed in computer: `pip install virtualenv`
-create virtualenv myenv : `py -m venv  myenv`
-activate virtual env : `myenv\Scripts\activate`
 
 ### virtual env ubuntu WSL
 install virtual env in laptop : `sudo apt install python3-venv`
@@ -41,7 +32,6 @@ third try :
 ### install packages
 `pip install wheel`
 `pip install -r requirements.txt`
-`pip install cryptography`
 `pip install pyopenssl==22.1.0`
 
 
@@ -58,18 +48,12 @@ create file : odoo.conf
 inside that put details:
 
     admin_passwd = admin
-
     db_host = localhost
     db_port = 5432
-
     db_user = odoo
-
     db_password = 12345
-
-    db_maxconn=5
-
+    db_maxconn=40
     addons_path = /mnt/c/Users/zz-spahari/Desktop/subhadip/odoo/project/odoo/addons
-
     http_port=8015
 
 *** special note : as I am using WSL-Ubuntu , so my path is /mnt/.....
