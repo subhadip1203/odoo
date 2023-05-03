@@ -10,4 +10,4 @@ pip freeze > requirements.txt
 
 ### install from requirement.txt
 
-pip istall -r requirements.txt
+pip install -r requirements.txt

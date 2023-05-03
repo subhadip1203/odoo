@@ -56,7 +56,7 @@ create file : odoo.conf
 
 inside that put details:
 
-    admin_passwd = admin
+    admin_passwd = admin123
     db_host = localhost
     db_port = 5432
     db_user = odoo
@@ -69,6 +69,15 @@ inside that put details:
 
 
 ### run odoo
+source myenv/bin/activate
+
 python3  ./odoo-bin -c conf/odoo.conf
+
+
+### user details
+
+user name: subhadipsjsc@gmail.com
+password : admin123
+
 
 
