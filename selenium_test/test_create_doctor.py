@@ -76,9 +76,19 @@ if test_passed:
     print(currentURL)
 
 if test_passed :
-    button_elements =driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div[2]/div[1]/div/div/button[3]')
-    if button_elements and button_elements.get_attribute('innerHTML').strip() == 'Create':
-        button_elements.click()
+    link_elements = driver.find_element(By.XPATH, "//*[@data-menu-xmlid='om_hospital.menu_doctor_root']")
+    if  link_elements :
+        link_elements.click()
+        time.sleep(2)
+    else:
+        test_passed = False
+        print ('test failed')
+
+if test_passed :
+    link_elements = driver.find_element(By.XPATH, "//*[@data-menu-xmlid='om_hospital.menu_doctor']")
+    if  link_elements :
+        print(link_elements.get_attribute('innerHTML'))
+        link_elements.click()
         time.sleep(2)
     else:
         test_passed = False
@@ -90,16 +100,33 @@ if test_passed:
     currentURL = driver.current_url
     print(currentURL)
 
+if test_passed :
+    button_elements =driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div[2]/div[1]/div/div/button')
+    if button_elements:
+        if button_elements.get_attribute('innerHTML').strip() == 'Create':
+            button_elements.click()
+            time.sleep(2)
+    else:
+        test_passed = False
+        print ('test failed')
+
+
+if test_passed:
+     # wait for URL to change with 15 seconds timeout
+    WebDriverWait(driver, 5).until(EC.url_changes(currentURL))
+    currentURL = driver.current_url
+    print(currentURL)
+
 
 randomNumber = random.randrange(1,9999999)
-globalName = 'test patient '+str(randomNumber)
-globalAge = '25'
-globalGender = 'Female'
-globalDescription = 'new patient '+ str(randomNumber)
+globalName = 'test doctor '+str(randomNumber)
+globalAge = '50'
+globalGender = 'Male'
+globalDescription = 'new Doctor '+ str(randomNumber)
 
 if test_passed :
     time.sleep(2)
-    name            =   driver.find_element(By.NAME,'name')
+    name            =   driver.find_element(By.NAME,'doctor_name')
     age             =   driver.find_element(By.NAME,'age')
     gender          =   driver.find_element(By.NAME,'gender')
     description     =   driver.find_element(By.NAME,'note')
@@ -124,36 +151,27 @@ if test_passed:
     WebDriverWait(driver, 5).until(EC.url_changes(currentURL))
     currentURL = driver.current_url
     print(currentURL)
-    
-
-
 
 
 if test_passed :
-    link_elements =driver.find_element(By.XPATH, '/html/body/header/nav/div[2]/div[1]/button')
-    if link_elements and link_elements.get_attribute('innerHTML') == '<span data-section="269">Patients</span>':
+    link_elements = driver.find_element(By.XPATH, "//*[@data-menu-xmlid='om_hospital.menu_doctor_root']")
+    if  link_elements :
         link_elements.click()
         time.sleep(2)
     else:
         test_passed = False
         print ('test failed')
 
-if test_passed:
-    link_elements = driver.find_element(By.XPATH, "//*[@data-menu-xmlid='om_hospital.menu_patient']")
-    if  link_elements and link_elements.get_attribute('innerHTML') == 'Patients' :
+if test_passed :
+    link_elements = driver.find_element(By.XPATH, "//*[@data-menu-xmlid='om_hospital.menu_doctor']")
+    if  link_elements :
+        print(link_elements.get_attribute('innerHTML'))
         link_elements.click()
         time.sleep(2)
     else:
         test_passed = False
         print ('test failed')
 
-if test_passed:
-    time.sleep(2)
-    cols = driver.find_elements(By.CSS_SELECTOR, "td:nth-child(3)")
-    for col in cols:
-        # print(col.get_attribute('innerHTML'),globalName , col.get_attribute('innerHTML') == globalName)
-        if col.get_attribute('innerHTML') == globalName:
-            col.click()
 
 if test_passed:
      # wait for URL to change with 15 seconds timeout
@@ -161,30 +179,26 @@ if test_passed:
     currentURL = driver.current_url
     print(currentURL)
 
+if test_passed:
+    time.sleep(2)
+    cols = driver.find_elements(By.XPATH, "//div[@class='oe_kanban_details']/ul/li/span")
+    for col in cols:
+        if col.get_attribute('innerHTML')== globalName :
+           print ('Final : test Passed , name  matched')
+
 
 if test_passed :
-    time.sleep(5)
-    name            =   driver.find_element(By.XPATH, "//*[@name='name']")
-    age             =   driver.find_element(By.XPATH, "//*[@name='age']")
-    gender          =   driver.find_element(By.XPATH, "//*[@name='gender']")
-    description     =   driver.find_element(By.XPATH, "//*[@name='note']")
-    if name  and age and gender and  description :
-        # print(name.get_attribute('innerHTML'), globalName) 
-        # print(age.get_attribute('innerHTML'), globalAge)  
-        # print(gender.get_attribute('innerHTML'), globalGender)   
-        # print(description.get_attribute('innerHTML'), globalDescription)  
-        
-        if name.get_attribute('innerHTML')!= globalName :
-           print ('Final : test Failed , name not matched')
-        elif  age.get_attribute('innerHTML') != globalAge :
-            print ('Final : test Failed , age not matched')
-        elif gender.get_attribute('innerHTML') != globalGender :
-            print ('Final : test Failed , gender not matched')
-        elif description.get_attribute('innerHTML') != globalDescription :
-            print ('Final : test Failed , description not matched')
-        else:
-            print ('Final : test Passed') 
+    button_elements =driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div[2]/div[1]/div/div/button[3]')
+    if button_elements:
+        if button_elements.get_attribute('innerHTML').strip() == 'Create':
+            button_elements.click()
+            time.sleep(2)
     else:
-        print ('test Failed')    
+        test_passed = False
+        print ('test failed')
 
-        
+if test_passed:
+    # wait for URL to change with 15 seconds timeout
+    WebDriverWait(driver, 5).until(EC.url_changes(currentURL))
+    currentURL = driver.current_url
+    print(currentURL)
