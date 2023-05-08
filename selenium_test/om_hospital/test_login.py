@@ -13,6 +13,7 @@ options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()) , options=options )
 
+
 test_passed = True
 driver.get("http://localhost:8015/")
 driver.maximize_window()

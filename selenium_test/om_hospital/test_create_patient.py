@@ -130,19 +130,21 @@ if test_passed:
 
 
 if test_passed :
+    time.sleep(2)
     link_elements =driver.find_element(By.XPATH, '/html/body/header/nav/div[2]/div[1]/button')
     if link_elements and link_elements.get_attribute('innerHTML') == '<span data-section="269">Patients</span>':
         link_elements.click()
-        time.sleep(2)
+        
     else:
         test_passed = False
         print ('test failed')
 
 if test_passed:
+    time.sleep(5)
     link_elements = driver.find_element(By.XPATH, "//*[@data-menu-xmlid='om_hospital.menu_patient']")
     if  link_elements and link_elements.get_attribute('innerHTML') == 'Patients' :
         link_elements.click()
-        time.sleep(2)
+        
     else:
         test_passed = False
         print ('test failed')

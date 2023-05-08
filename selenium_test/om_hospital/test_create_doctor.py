@@ -76,6 +76,7 @@ if test_passed:
     print(currentURL)
 
 if test_passed :
+    time.sleep(2)
     link_elements = driver.find_element(By.XPATH, "//*[@data-menu-xmlid='om_hospital.menu_doctor_root']")
     if  link_elements :
         link_elements.click()
@@ -85,6 +86,7 @@ if test_passed :
         print ('test failed')
 
 if test_passed :
+    time.sleep(2)
     link_elements = driver.find_element(By.XPATH, "//*[@data-menu-xmlid='om_hospital.menu_doctor']")
     if  link_elements :
         print(link_elements.get_attribute('innerHTML'))
@@ -185,20 +187,3 @@ if test_passed:
     for col in cols:
         if col.get_attribute('innerHTML')== globalName :
            print ('Final : test Passed , name  matched')
-
-
-if test_passed :
-    button_elements =driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div[2]/div[1]/div/div/button[3]')
-    if button_elements:
-        if button_elements.get_attribute('innerHTML').strip() == 'Create':
-            button_elements.click()
-            time.sleep(2)
-    else:
-        test_passed = False
-        print ('test failed')
-
-if test_passed:
-    # wait for URL to change with 15 seconds timeout
-    WebDriverWait(driver, 5).until(EC.url_changes(currentURL))
-    currentURL = driver.current_url
-    print(currentURL)
