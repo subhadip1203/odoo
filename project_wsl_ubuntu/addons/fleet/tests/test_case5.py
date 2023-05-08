@@ -26,4 +26,4 @@ class TestFleet(TransactionCase):
 
         WARNING = '\033[93m'
         ENDC = '\033[0m'
-        print(f"{WARNING}5. ### Test case passed{ENDC}")
+        print(f"{WARNING}FLEET 5. ### Test case passed{ENDC}")

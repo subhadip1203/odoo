@@ -18,4 +18,4 @@ class TestFleet(TransactionCase):
         self.assertEqual(new_vehicle_model.name, 'camry')
         WARNING = '\033[93m'
         ENDC = '\033[0m'
-        print(f"{WARNING}3. ### Test case passed{ENDC}")
+        print(f"{WARNING}FLEET 3. ### Test case passed{ENDC}")

@@ -8,7 +8,7 @@ class TestFleet(TransactionCase):
         self.vehicle_model = self.env['fleet.vehicle']
 
 
-    def test_vehicle_tag(self):
+    def test_vehicle_odometer(self):
         """Test that a new vehicle company and model"""
         vehicle_data = {'model_id': 2, 'license_plate': 'ABCD123'}
         new_vehicle = self.vehicle_model.create(vehicle_data)
@@ -20,4 +20,4 @@ class TestFleet(TransactionCase):
         self.assertEqual(odoDetails.vehicle_id.model_id.id, 2)
         WARNING = '\033[93m'
         ENDC = '\033[0m'
-        print(f"{WARNING}4. ### Test case passed{ENDC}")
+        print(f"{WARNING}FLEET 4. ### Test case passed{ENDC}")

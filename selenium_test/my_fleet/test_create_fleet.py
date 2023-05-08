@@ -75,24 +75,6 @@ if test_passed:
     currentURL = driver.current_url
     print(currentURL)
 
-# if test_passed :
-#     link_elements = driver.find_element(By.XPATH, "//*[@data-menu-xmlid='fleet.fleet_vehicles']")
-#     if  link_elements :
-#         link_elements.click()
-#         time.sleep(2)
-#     else:
-#         test_passed = False
-#         print ('test failed')
-
-
-# if test_passed :
-#     link_elements = driver.find_element(By.XPATH, "//*[@data-menu-xmlid='fleet.fleet_vehicle_menu']")
-#     if  link_elements :
-#         link_elements.click()
-#         time.sleep(2)
-#     else:
-#         test_passed = False
-#         print ('test failed')
 
 if test_passed :
     button_elements =driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div[2]/div[1]/div/div/button')

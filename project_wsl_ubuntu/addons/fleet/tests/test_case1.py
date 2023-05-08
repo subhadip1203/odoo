@@ -17,4 +17,4 @@ class TestFleet(TransactionCase):
         self.assertEqual(new_vehicle.driver_id.id, new_partner.id)
         WARNING = '\033[93m'
         ENDC = '\033[0m'
-        print(f"{WARNING}1. ### Test case passed{ENDC}")
+        print(f"{WARNING}FLEET 1. ### Test case passed{ENDC}")

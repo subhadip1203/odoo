@@ -16,4 +16,4 @@ class TestFleet(TransactionCase):
         self.assertEqual(new_vehicle.license_plate, license_plateno)
         WARNING = '\033[93m'
         ENDC = '\033[0m'
-        print(f"{WARNING}2. ### Test case passed{ENDC}")
+        print(f"{WARNING}FLEET 2. ### Test case passed{ENDC}")

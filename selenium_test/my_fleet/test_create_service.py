@@ -161,6 +161,7 @@ if test_passed :
         input_date.send_keys('05/15/2023')
         time.sleep(2)
         button_elements.click()
+        print("test successful")
     else:
         test_passed = False
         print('test Failed')

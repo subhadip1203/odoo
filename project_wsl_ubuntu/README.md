@@ -76,10 +76,9 @@ python3  ./odoo-bin -c conf/odoo.conf
 
 ### run unit test
 
-python3  ./odoo-bin -c ./debian/odoo.conf --test-tags /fleet
-
 python3  ./odoo-bin -c conf/odoo.conf --test-tags /fleet
-python3  ./odoo-bin -c conf/odoo.conf -u om_hospital --test-enable
+python3  ./odoo-bin -c conf/odoo.conf --test-tags /om_hospital
+
 
 ### user details
 
