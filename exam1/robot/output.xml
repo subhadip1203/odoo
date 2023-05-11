@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.9 on win32)" generated="20230511 11:48:19.920" rpa="false" schemaversion="3">
-<suite id="s1" name="First Test" source="C:\Users\zz-spahari\Desktop\subhadip\odoo\exam1\robot\first_test.robot">
+<robot generator="Robot 6.0.2 (Python 3.10.9 on win32)" generated="20230511 14:41:32.910" rpa="false" schemaversion="3">
+<suite id="s1" name="Product" source="C:\Users\zz-spahari\Desktop\subhadip\odoo\exam1\robot\product.robot">
 <test id="s1-t1" name="Valid Login" line="12">
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${URL}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20230511 11:48:20.053" level="INFO">${URL} = http://localhost:8015/web/login</msg>
-<status status="PASS" starttime="20230511 11:48:20.053" endtime="20230511 11:48:20.053"/>
+<msg timestamp="20230511 14:41:33.052" level="INFO">${URL} = http://localhost:8015/web/login</msg>
+<status status="PASS" starttime="20230511 14:41:33.052" endtime="20230511 14:41:33.052"/>
 </kw>
 <kw name="Open Browser To Login Page">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230511 11:48:20.054" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8015/web/login'.</msg>
-<msg timestamp="20230511 11:48:20.058" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230511 11:48:20.053" endtime="20230511 11:48:22.182"/>
+<msg timestamp="20230511 14:41:33.054" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8015/web/login'.</msg>
+<msg timestamp="20230511 14:41:33.058" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230511 14:41:33.053" endtime="20230511 14:41:35.183"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Login | My Website</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230511 11:48:22.186" level="INFO">Page title is 'Login | My Website'.</msg>
-<status status="PASS" starttime="20230511 11:48:22.182" endtime="20230511 11:48:22.186"/>
+<msg timestamp="20230511 14:41:35.187" level="INFO">Page title is 'Login | My Website'.</msg>
+<status status="PASS" starttime="20230511 14:41:35.183" endtime="20230511 14:41:35.187"/>
 </kw>
-<status status="PASS" starttime="20230511 11:48:20.053" endtime="20230511 11:48:22.186"/>
+<status status="PASS" starttime="20230511 14:41:33.053" endtime="20230511 14:41:35.187"/>
 </kw>
 <kw name="Input Username">
 <arg>subhadipsjsc@gmail.com</arg>
@@ -31,10 +31,10 @@
 <arg>name:login</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230511 11:48:22.188" level="INFO">Typing text 'subhadipsjsc@gmail.com' into text field 'name:login'.</msg>
-<status status="PASS" starttime="20230511 11:48:22.187" endtime="20230511 11:48:22.242"/>
+<msg timestamp="20230511 14:41:35.189" level="INFO">Typing text 'subhadipsjsc@gmail.com' into text field 'name:login'.</msg>
+<status status="PASS" starttime="20230511 14:41:35.187" endtime="20230511 14:41:35.241"/>
 </kw>
-<status status="PASS" starttime="20230511 11:48:22.187" endtime="20230511 11:48:22.242"/>
+<status status="PASS" starttime="20230511 14:41:35.187" endtime="20230511 14:41:35.241"/>
 </kw>
 <kw name="Input Password">
 <arg>admin123</arg>
@@ -42,275 +42,200 @@
 <arg>name:password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230511 11:48:22.243" level="INFO">Typing text 'admin123' into text field 'name:password'.</msg>
-<status status="PASS" starttime="20230511 11:48:22.243" endtime="20230511 11:48:22.294"/>
+<msg timestamp="20230511 14:41:35.242" level="INFO">Typing text 'admin123' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20230511 14:41:35.242" endtime="20230511 14:41:35.291"/>
 </kw>
-<status status="PASS" starttime="20230511 11:48:22.243" endtime="20230511 11:48:22.294"/>
+<status status="PASS" starttime="20230511 14:41:35.242" endtime="20230511 14:41:35.291"/>
 </kw>
 <kw name="Submit Credentials">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath://*[@id="wrapwrap"]/main/div/form/div[3]/button[1]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230511 11:48:22.295" level="INFO">Clicking button 'xpath://*[@id="wrapwrap"]/main/div/form/div[3]/button[1]'.</msg>
-<status status="PASS" starttime="20230511 11:48:22.294" endtime="20230511 11:48:23.446"/>
+<msg timestamp="20230511 14:41:35.292" level="INFO">Clicking button 'xpath://*[@id="wrapwrap"]/main/div/form/div[3]/button[1]'.</msg>
+<status status="PASS" starttime="20230511 14:41:35.292" endtime="20230511 14:41:36.448"/>
 </kw>
-<status status="PASS" starttime="20230511 11:48:22.294" endtime="20230511 11:48:23.446"/>
-</kw>
-<kw name="handle url change">
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${URL}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20230511 11:48:23.450" level="INFO">${URL} = http://localhost:8015/web#cids=1</msg>
-<status status="PASS" starttime="20230511 11:48:23.446" endtime="20230511 11:48:23.450"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${URL}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230511 11:48:23.450" endtime="20230511 11:48:23.450"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230511 11:48:24.461" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20230511 11:48:23.450" endtime="20230511 11:48:24.461"/>
-</kw>
-<status status="PASS" starttime="20230511 11:48:23.446" endtime="20230511 11:48:24.461"/>
+<status status="PASS" starttime="20230511 14:41:35.291" endtime="20230511 14:41:36.448"/>
 </kw>
 <kw name="handle url change">
 <kw name="Get Location" library="SeleniumLibrary">
 <var>${URL}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20230511 11:48:24.472" level="INFO">${URL} = http://localhost:8015/web#cids=1</msg>
-<status status="PASS" starttime="20230511 11:48:24.463" endtime="20230511 11:48:24.472"/>
+<msg timestamp="20230511 14:41:36.457" level="INFO">${URL} = http://localhost:8015/web#cids=1</msg>
+<status status="PASS" starttime="20230511 14:41:36.450" endtime="20230511 14:41:36.457"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${URL}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230511 11:48:24.472" endtime="20230511 11:48:24.472"/>
+<status status="PASS" starttime="20230511 14:41:36.457" endtime="20230511 14:41:36.458"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230511 11:48:25.480" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20230511 11:48:24.472" endtime="20230511 11:48:25.480"/>
+<msg timestamp="20230511 14:41:37.471" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230511 14:41:36.458" endtime="20230511 14:41:37.471"/>
 </kw>
-<status status="PASS" starttime="20230511 11:48:24.462" endtime="20230511 11:48:25.480"/>
+<status status="PASS" starttime="20230511 14:41:36.449" endtime="20230511 14:41:37.471"/>
+</kw>
+<kw name="handle url change">
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${URL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230511 14:41:37.477" level="INFO">${URL} = http://localhost:8015/web#cids=1</msg>
+<status status="PASS" starttime="20230511 14:41:37.473" endtime="20230511 14:41:37.477"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${URL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230511 14:41:37.477" endtime="20230511 14:41:37.477"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 14:41:38.489" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230511 14:41:37.477" endtime="20230511 14:41:38.489"/>
+</kw>
+<status status="PASS" starttime="20230511 14:41:37.472" endtime="20230511 14:41:38.490"/>
 </kw>
 <kw name="click on home menu">
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230511 11:48:28.489" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230511 11:48:25.482" endtime="20230511 11:48:28.489"/>
+<msg timestamp="20230511 14:41:41.503" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230511 14:41:38.491" endtime="20230511 14:41:41.503"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath:/html/body/header/nav/div[1]/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230511 11:48:28.490" level="INFO">Clicking button 'xpath:/html/body/header/nav/div[1]/button'.</msg>
-<status status="PASS" starttime="20230511 11:48:28.489" endtime="20230511 11:48:28.535"/>
+<msg timestamp="20230511 14:41:41.505" level="INFO">Clicking button 'xpath:/html/body/header/nav/div[1]/button'.</msg>
+<msg timestamp="20230511 14:41:42.673" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230511 14:41:42.673" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button class="dropdown-toggle  " title="Home Menu" data-hotkey="h" aria-expanded="false"&gt;...&lt;/button&gt; is not clickable at point (23, 23). Other element would receive the click: &lt;div role="dialog" tabindex="-1" class="modal o_technical_modal"&gt;...&lt;/div&gt;
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x002C8893+48451]
+	(No symbol) [0x0025B8A1]
+	(No symbol) [0x00165058]
+	(No symbol) [0x00194BA4]
+	(No symbol) [0x001936E8]
+	(No symbol) [0x00191EEB]
+	(No symbol) [0x001912FE]
+	(No symbol) [0x00189AAC]
+	(No symbol) [0x001AA2BC]
+	(No symbol) [0x00189586]
+	(No symbol) [0x001AA614]
+	(No symbol) [0x001BC482]
+	(No symbol) [0x001AA0B6]
+	(No symbol) [0x00187E08]
+	(No symbol) [0x00188F2D]
+	GetHandleVerifier [0x00528E3A+2540266]
+	GetHandleVerifier [0x00568959+2801161]
+	GetHandleVerifier [0x0056295C+2776588]
+	GetHandleVerifier [0x00352280+612144]
+	(No symbol) [0x00264F6C]
+	(No symbol) [0x002611D8]
+	(No symbol) [0x002612BB]
+	(No symbol) [0x00254857]
+	BaseThreadInitThunk [0x76240099+25]
+	RtlGetAppContainerNamedObjectPath [0x77DB7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77DB7B3E+238]
+	(No symbol) [0x00000000]
+</msg>
+<status status="FAIL" starttime="20230511 14:41:41.503" endtime="20230511 14:41:42.675"/>
 </kw>
-<status status="PASS" starttime="20230511 11:48:25.481" endtime="20230511 11:48:28.535"/>
+<status status="FAIL" starttime="20230511 14:41:38.491" endtime="20230511 14:41:42.675"/>
 </kw>
 <kw name="click on lunch menu">
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230511 11:48:31.549" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230511 11:48:28.536" endtime="20230511 11:48:31.549"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${inner html}</var>
-<arg>xpath:/html/body/header/nav/div[1]/div/a[8]</arg>
-<arg>innerHTML</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20230511 11:48:31.573" level="INFO">${inner html} = Lunch</msg>
-<status status="PASS" starttime="20230511 11:48:31.549" endtime="20230511 11:48:31.573"/>
-</kw>
-<kw name="Should Be True" library="BuiltIn">
-<arg>"""${inner html}""".strip() == "Lunch"</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20230511 11:48:31.573" endtime="20230511 11:48:31.574"/>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>xpath:/html/body/header/nav/div[1]/div/a[8]</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230511 11:48:31.574" level="INFO">Clicking link 'xpath:/html/body/header/nav/div[1]/div/a[8]'.</msg>
-<status status="PASS" starttime="20230511 11:48:31.574" endtime="20230511 11:48:31.603"/>
-</kw>
-<status status="PASS" starttime="20230511 11:48:28.535" endtime="20230511 11:48:31.603"/>
+<status status="NOT RUN" starttime="20230511 14:41:42.676" endtime="20230511 14:41:42.676"/>
 </kw>
 <kw name="handle url change">
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${URL}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20230511 11:48:31.606" level="INFO">${URL} = http://localhost:8015/web#cids=1&amp;default_active_id=mail.box_inbox&amp;action=118&amp;menu_id=84&amp;active_id=mail.box_inbox</msg>
-<status status="PASS" starttime="20230511 11:48:31.604" endtime="20230511 11:48:31.606"/>
+<status status="NOT RUN" starttime="20230511 14:41:42.676" endtime="20230511 14:41:42.676"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${URL}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230511 11:48:31.606" endtime="20230511 11:48:31.607"/>
+<kw name="click on Configuration">
+<status status="NOT RUN" starttime="20230511 14:41:42.677" endtime="20230511 14:41:42.677"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230511 11:48:32.622" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20230511 11:48:31.607" endtime="20230511 11:48:32.622"/>
+<kw name="click on Product Category">
+<status status="NOT RUN" starttime="20230511 14:41:42.677" endtime="20230511 14:41:42.677"/>
 </kw>
-<status status="PASS" starttime="20230511 11:48:31.603" endtime="20230511 11:48:32.622"/>
+<kw name="handle url change">
+<status status="NOT RUN" starttime="20230511 14:41:42.677" endtime="20230511 14:41:42.677"/>
 </kw>
-<kw name="click on first food item">
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230511 11:48:35.626" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230511 11:48:32.624" endtime="20230511 11:48:35.626"/>
+<kw name="click on create product category">
+<status status="NOT RUN" starttime="20230511 14:41:42.677" endtime="20230511 14:41:42.677"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>class:o_kanban_record</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230511 11:48:35.627" level="INFO">Clicking element 'class:o_kanban_record'.</msg>
-<status status="PASS" starttime="20230511 11:48:35.626" endtime="20230511 11:48:35.664"/>
+<kw name="handle url change">
+<status status="NOT RUN" starttime="20230511 14:41:42.677" endtime="20230511 14:41:42.677"/>
 </kw>
-<status status="PASS" starttime="20230511 11:48:32.623" endtime="20230511 11:48:35.665"/>
+<kw name="Input product category name">
+<arg>new Product category</arg>
+<status status="NOT RUN" starttime="20230511 14:41:42.678" endtime="20230511 14:41:42.678"/>
 </kw>
-<kw name="Input Note for order">
-<arg>please add extra Cheese</arg>
-<kw name="Sleep" library="BuiltIn">
-<arg>4s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230511 11:48:39.666" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20230511 11:48:35.665" endtime="20230511 11:48:39.666"/>
+<kw name="click on save product category">
+<status status="NOT RUN" starttime="20230511 14:41:42.678" endtime="20230511 14:41:42.678"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:note</arg>
-<arg>${note}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230511 11:48:39.668" level="INFO">Typing text 'please add extra Cheese' into text field 'name:note'.</msg>
-<status status="PASS" starttime="20230511 11:48:39.666" endtime="20230511 11:48:39.731"/>
+<kw name="handle url change">
+<status status="NOT RUN" starttime="20230511 14:41:42.678" endtime="20230511 14:41:42.678"/>
 </kw>
-<status status="PASS" starttime="20230511 11:48:35.665" endtime="20230511 11:48:39.731"/>
+<kw name="click on Configuration">
+<status status="NOT RUN" starttime="20230511 14:41:42.678" endtime="20230511 14:41:42.678"/>
 </kw>
-<kw name="click add to cart">
-<kw name="Sleep" library="BuiltIn">
-<arg>4s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230511 11:48:43.736" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20230511 11:48:39.732" endtime="20230511 11:48:43.736"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name:add_to_cart</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230511 11:48:43.737" level="INFO">Clicking button 'name:add_to_cart'.</msg>
-<status status="PASS" starttime="20230511 11:48:43.736" endtime="20230511 11:48:43.786"/>
-</kw>
-<status status="PASS" starttime="20230511 11:48:39.732" endtime="20230511 11:48:43.786"/>
-</kw>
-<kw name="click order now">
-<kw name="Sleep" library="BuiltIn">
-<arg>4s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230511 11:48:47.794" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20230511 11:48:43.787" endtime="20230511 11:48:47.794"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[1]/div/div[2]/div[2]/span/div/div/div[3]/div/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230511 11:48:47.795" level="INFO">Clicking button 'xpath:/html/body/div[1]/div/div[2]/div[2]/span/div/div/div[3]/div/button'.</msg>
-<status status="PASS" starttime="20230511 11:48:47.794" endtime="20230511 11:48:47.844"/>
-</kw>
-<status status="PASS" starttime="20230511 11:48:43.787" endtime="20230511 11:48:47.845"/>
-</kw>
-<kw name="delete an order">
-<kw name="Sleep" library="BuiltIn">
-<arg>4s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230511 11:48:51.853" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20230511 11:48:47.846" endtime="20230511 11:48:51.853"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[1]/div/div[2]/div[2]/span/div/div/div[2]/div/h4/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230511 11:48:51.854" level="INFO">Clicking button 'xpath:/html/body/div[1]/div/div[2]/div[2]/span/div/div/div[2]/div/h4/button'.</msg>
-<status status="PASS" starttime="20230511 11:48:51.853" endtime="20230511 11:48:51.901"/>
-</kw>
-<status status="PASS" starttime="20230511 11:48:47.845" endtime="20230511 11:48:51.901"/>
+<kw name="click on Product Category">
+<status status="NOT RUN" starttime="20230511 14:41:42.678" endtime="20230511 14:41:42.678"/>
 </kw>
 <kw name="click on account logo">
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230511 11:48:54.911" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230511 11:48:51.902" endtime="20230511 11:48:54.911"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${inner html}</var>
-<arg>class:oe_topbar_name</arg>
-<arg>innerHTML</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20230511 11:48:54.929" level="INFO">${inner html} = Administrator</msg>
-<status status="PASS" starttime="20230511 11:48:54.911" endtime="20230511 11:48:54.929"/>
-</kw>
-<kw name="Should Be True" library="BuiltIn">
-<arg>"""${inner html}""".strip() == "Administrator"</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20230511 11:48:54.929" endtime="20230511 11:48:54.930"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>class:oe_topbar_name</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230511 11:48:54.930" level="INFO">Clicking element 'class:oe_topbar_name'.</msg>
-<status status="PASS" starttime="20230511 11:48:54.930" endtime="20230511 11:48:54.953"/>
-</kw>
-<status status="PASS" starttime="20230511 11:48:51.902" endtime="20230511 11:48:54.953"/>
+<status status="NOT RUN" starttime="20230511 14:41:42.679" endtime="20230511 14:41:42.679"/>
 </kw>
 <kw name="click on logout">
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230511 11:48:57.967" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230511 11:48:54.954" endtime="20230511 11:48:57.967"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${inner html}</var>
-<arg>xpath://a[@href="http://localhost:8015/web/session/logout"]</arg>
-<arg>innerHTML</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20230511 11:48:57.982" level="INFO">${inner html} = Log out</msg>
-<status status="PASS" starttime="20230511 11:48:57.967" endtime="20230511 11:48:57.982"/>
-</kw>
-<kw name="Should Be True" library="BuiltIn">
-<arg>"""${inner html}""".strip() == "Log out"</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20230511 11:48:57.982" endtime="20230511 11:48:57.983"/>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>xpath://a[@href="http://localhost:8015/web/session/logout"]</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230511 11:48:57.983" level="INFO">Clicking link 'xpath://a[@href="http://localhost:8015/web/session/logout"]'.</msg>
-<status status="PASS" starttime="20230511 11:48:57.983" endtime="20230511 11:48:59.051"/>
-</kw>
-<status status="PASS" starttime="20230511 11:48:54.954" endtime="20230511 11:48:59.052"/>
+<status status="NOT RUN" starttime="20230511 14:41:42.679" endtime="20230511 14:41:42.679"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230511 11:49:09.055" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20230511 11:48:59.052" endtime="20230511 11:49:09.055"/>
+<status status="NOT RUN" starttime="20230511 14:41:42.679" endtime="20230511 14:41:42.679"/>
 </kw>
-<status status="PASS" starttime="20230511 11:48:20.052" endtime="20230511 11:49:09.057"/>
+<status status="FAIL" starttime="20230511 14:41:33.052" endtime="20230511 14:41:42.679">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button class="dropdown-toggle  " title="Home Menu" data-hotkey="h" aria-expanded="false"&gt;...&lt;/button&gt; is not clickable at point (23, 23). Other element would receive the click: &lt;div role="dialog" tabindex="-1" class="modal o_technical_modal"&gt;...&lt;/div&gt;
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x002C8893+48451]
+	(No symbol) [0x0025B8A1]
+	(No symbol) [0x00165058]
+	(No symbol) [0x00194BA4]
+	(No symbol) [0x001936E8]
+	(No symbol) [0x00191EEB]
+	(No symbol) [0x001912FE]
+	(No symbol) [0x00189AAC]
+	(No symbol) [0x001AA2BC]
+	(No symbol) [0x00189586]
+	(No symbol) [0x001AA614]
+	(No symbol) [0x001BC482]
+	(No symbol) [0x001AA0B6]
+	(No symbol) [0x00187E08]
+	(No symbol) [0x00188F2D]
+	GetHandleVerifier [0x00528E3A+2540266]
+	GetHandleVerifier [0x00568959+2801161]
+	GetHandleVerifier [0x0056295C+2776588]
+	GetHandleVerifier [0x00352280+612144]
+	(No symbol) [0x00264F6C]
+	(No symbol) [0x002611D8]
+	(No symbol) [0x002612BB]
+	(No symbol) [0x00254857]
+	BaseThreadInitThunk [0x76240099+25]
+	RtlGetAppContainerNamedObjectPath [0x77DB7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77DB7B3E+238]
+	(No symbol) [0x00000000]
+</status>
 </test>
 <doc>Testing user autentication and checking if details are same from login account.</doc>
-<status status="PASS" starttime="20230511 11:48:19.921" endtime="20230511 11:49:09.060"/>
+<status status="FAIL" starttime="20230511 14:41:32.911" endtime="20230511 14:41:42.683"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="First Test">First Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Product">Product</stat>
 </suite>
 </statistics>
 <errors>
