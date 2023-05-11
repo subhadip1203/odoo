@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     Testing user autentication and checking if details are same from login account.
+Documentation     Testing product category
 Library           SeleniumLibrary
 
 *** Variables ***
@@ -9,7 +9,8 @@ ${BROWSER}        Chrome
 
 
 *** Test Cases ***
-Valid Login
+Valid Product Category
+
     Set Global Variable    ${URL} 
     Open Browser To Login Page                            # step 1
     Input Username    subhadipsjsc@gmail.com              # step 2
